@@ -66,10 +66,18 @@ body{
     transition: 0.2s;
 }
 
+.dropdown-menu{
+    background-color: rgb(132, 132, 230);
+}
+
 .dropdown-menu a{
     text-decoration: none;
-    color: rgb(132, 132, 230);
+    color: rgb(51, 51, 51);
     transition: 0.2s;
+}
+
+.dropdown-item a :hover{
+    color: rgb(132, 132, 230);
 }
 
 .encabezado--link{
@@ -161,9 +169,30 @@ body{
     width: 150px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 25px;
 }
 
 .encabezado--index h2{
+    display:inline-block;
+    flex-direction:row;
+    background-color: rgb(132, 132, 230);
+    border-radius: 5px;
+    border-bottom: 03px solid rgb(58, 58, 197);
+    padding: 05px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.encabezado--todos {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.encabezado--todos h2{
     display:inline-block;
     flex-direction:row;
     background-color: rgb(132, 132, 230);
