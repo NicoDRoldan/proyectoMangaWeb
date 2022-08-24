@@ -438,12 +438,12 @@ body{
         "main--contacto"
         "footer--grid";
         grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-        grid-template-rows: 75px auto 60px ; /* se establecerá la medida de cada una de las filas */
+        grid-template-rows: 75px auto 75px ; /* se establecerá la medida de cada una de las filas */
 }
 
 .main--contacto {
     grid-area: main--contacto;
-    height: 812px;
+    height: 797px;
 }
 
 .hr--superpuesto {
