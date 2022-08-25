@@ -107,6 +107,10 @@ body{
     display: flex;
     flex-wrap: wrap;
     width: 1160px;
+    animation-duration: 1s;
+    animation-name: transparencia;
+    animation-timing-function: infinite;
+
 }
 
 .manga{   
