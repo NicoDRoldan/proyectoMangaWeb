@@ -581,6 +581,10 @@ body{
     .hr--superpuesto{
         display: none;
     }
+
+    .footer--grid{
+        justify-content: center;
+    }
 }
 /*media screen*/
 
