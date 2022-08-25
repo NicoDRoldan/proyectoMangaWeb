@@ -553,6 +553,17 @@ body{
         grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
     }
 
+    .contenedor--grid{
+        display: grid;
+        grid-template-areas: /* de esta forma se establece que el body utilizará solo */
+       /* una columna, compartida por el header, main y footer */
+            "header--grid"
+            "main--grid"
+            "footer--grid";
+        grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+        grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
+    }
+
     .catalogo{
         display: flex;
         flex-wrap: wrap;
@@ -573,7 +584,7 @@ body{
 }
 /*media screen*/
 
-/*media screen*/
+/*media screen contacto*/
 @media screen and (max-width:768px){
     .contenedor--grid--contacto{
         display: grid;
@@ -588,7 +599,7 @@ body{
 
     .main--contacto{
         background-color: rgb(51, 51, 51);
-        height: 616px;
+        height: auto;
     }
 
     .contacto{
