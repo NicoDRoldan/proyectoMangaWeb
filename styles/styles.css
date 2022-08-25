@@ -430,6 +430,11 @@ body{
     .footer--grid ul p{
         text-align: center;
     }
+
+    .img--logo--footer{
+        position: relative;
+        top: 0%;
+    }
     /*footer*/
 }
 
@@ -626,3 +631,4 @@ body{
 .font--nav{
     font-size:medium;
 }
+/*bootstrap*/
