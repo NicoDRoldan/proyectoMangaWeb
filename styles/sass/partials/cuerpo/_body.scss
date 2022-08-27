@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: $black--principal;
+    font-family: $fuente--principal;
+    font-size: 12px;
+    background-color: rgb(221, 221, 221);
+}
+
+.contenedor--grid{
+    display: grid;
+    grid-template-areas: /* de esta forma se establece que el body utilizará solo */
+        "header--grid"         /* una columna, compartida por el header, main y footer */
+        "main--grid"
+        "footer--grid";
+    grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+    grid-template-rows: 75px auto 80px ; /* se establecerá la medida de cada una de las filas */
+}

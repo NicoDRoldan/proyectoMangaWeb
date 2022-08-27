@@ -1,649 +1,569 @@
-/*body*/
+@charset "UTF-8";
+.fondo-nav {
+  background-color: rgb(51, 51, 51);
+}
+
+.h6-no-margin {
+  margin: 0;
+}
+
+.font--nav {
+  font-size: medium;
+}
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    color: rgb(51, 51, 51);
-    font-family: "Poppins",Sans-serif;
-    font-size: 12px;
-    background-color: rgb(221, 221, 221);
+body {
+  color: rgb(51, 51, 51);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  background-color: rgb(221, 221, 221);
 }
 
-.contenedor--grid{
+.contenedor--grid {
+  display: grid;
+  grid-template-areas: "header--grid" "main--grid" "footer--grid";
+  grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+  grid-template-rows: 75px auto 80px; /* se establecerá la medida de cada una de las filas */
+}
+
+.header--grid {
+  display: flex;
+  background-color: rgb(51, 51, 51);
+  background-size: cover;
+  grid-area: header--grid;
+  align-items: center;
+  width: auto;
+  height: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+.header--logo {
+  margin: 5%;
+}
+.header--logo img {
+  max-width: 300px;
+}
+
+.header--encabezado {
+  font-size: 22px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.encabezado--enlaces {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  margin-left: 50px;
+  margin-right: auto;
+  flex-wrap: wrap;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: transparencia;
+          animation-name: transparencia;
+  -webkit-animation-timing-function: infinite;
+          animation-timing-function: infinite;
+}
+.encabezado--enlaces a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: 0.2s;
+}
+.encabezado--enlaces a :hover {
+  color: rgb(132, 132, 230);
+}
+
+.dropdown-menu {
+  background-color: rgb(132, 132, 230);
+  font-size: large;
+}
+.dropdown-menu a {
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  transition: 0.2s;
+}
+.dropdown-menu :hover {
+  color: rgb(132, 132, 230);
+}
+
+.encabezado--link {
+  color: rgb(132, 132, 230);
+  padding: 10px;
+  margin-right: 50px;
+  flex-direction: row;
+}
+
+.navbar-nav a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+
+.main--grid {
+  grid-area: main--grid;
+}
+
+.catalogo {
+  margin-top: 1%;
+  display: grid;
+  justify-items: center;
+}
+
+.catalogo--mangas {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1160px;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: transparencia;
+          animation-name: transparencia;
+  -webkit-animation-timing-function: infinite;
+          animation-timing-function: infinite;
+}
+
+.manga {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.manga a {
+  text-decoration: none;
+}
+
+.manga--imagen img {
+  width: 252px;
+  height: 400px;
+  transition: 0.2s;
+}
+.manga--imagen :hover {
+  transform: scale(1.03, 1.03);
+}
+
+.manga--titulo h2 {
+  color: rgb(51, 51, 51);
+  width: 252px;
+  max-height: 25px;
+  height: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+  padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.034);
+  text-align: center;
+}
+.manga--titulo h5 {
+  color: rgb(51, 51, 51);
+  width: 252px;
+  max-height: 25px;
+  height: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+  padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.034);
+  text-align: center;
+}
+
+.encabezado--genero {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(255, 255, 255);
+  background-color: rgb(132, 132, 230);
+  text-align: center;
+}
+.encabezado--genero a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.encabezado--genero :hover {
+  color: rgb(51, 51, 51);
+}
+
+.encabezado--index {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+.encabezado--index h2 {
+  display: inline-block;
+  flex-direction: row;
+  background-color: rgb(132, 132, 230);
+  border-radius: 5px;
+  border-bottom: 3px solid rgb(58, 58, 197);
+  padding: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.encabezado--todos {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+.encabezado--todos h2 {
+  display: inline-block;
+  flex-direction: row;
+  background-color: rgb(132, 132, 230);
+  border-radius: 5px;
+  border-bottom: 3px solid rgb(58, 58, 197);
+  padding: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#banner_hxh {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 40px;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: transparencia;
+          animation-name: transparencia;
+  -webkit-animation-timing-function: infinite;
+          animation-timing-function: infinite;
+}
+
+.envio--gratis {
+  color: rgb(255, 255, 255);
+  background-color: rgb(132, 132, 230);
+  text-align: center;
+  font-size: large;
+}
+
+.banner-one-piece-1 {
+  background-color: rgba(51, 51, 51, 0.048);
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.banner-one-piece-1 h2 {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: x-large;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(128, 128, 128);
+}
+.banner-one-piece-1 img {
+  height: 100%;
+  border-radius: 50px;
+  width: 450px;
+}
+
+.footer--grid {
+  grid-area: footer--grid;
+  background-color: rgb(44, 44, 44);
+  color: rgb(255, 253, 253);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img--logo--footer {
+  position: relative;
+  top: 25px;
+  width: 250px;
+  height: 50px;
+}
+
+.footer--grid ul {
+  margin-left: 50px;
+  margin-right: 20%;
+  display: inline-block;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.footer--grid ul li {
+  display: flex;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.footer--grid ul li p {
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.footer--grid ul li img {
+  width: 20px;
+}
+
+.contenedor--grid--contacto {
+  display: grid;
+  grid-template-areas: "header--grid" "main--contacto" "footer--grid";
+  grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+  grid-template-rows: 75px auto 75px; /* se establecerá la medida de cada una de las filas */
+}
+
+.main--contacto {
+  grid-area: main--contacto;
+  height: 797px;
+}
+
+.hr--superpuesto {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contacto--padre {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1000px;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: transparencia;
+          animation-name: transparencia;
+  -webkit-animation-timing-function: infinite;
+          animation-timing-function: infinite;
+}
+
+.div--contacto {
+  font-size: 17px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 150px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 16px;
+  text-align: center;
+  background-color: rgb(221, 221, 221);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.formulario div {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.formulario div input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.formulario div textarea {
+  height: 90px;
+  width: 400px;
+}
+
+.enviar {
+  display: flex;
+  justify-content: end;
+}
+.enviar :hover {
+  color: rgb(255, 255, 255);
+}
+
+.formulario--enviar {
+  background-color: rgb(132, 132, 230);
+  width: 110px;
+  height: 40px;
+  box-shadow: -1.5px -1.5px rgb(80, 80, 206);
+  transition: 1s;
+}
+
+#parrafo--formulario {
+  width: 400px;
+  color: rgb(132, 132, 230);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  margin-right: 1%;
+}
+
+@-webkit-keyframes transparencia {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes transparencia {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*media screen*/
+@media screen and (max-width: 1140px) and (min-width: 768px) {
+  .catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    margin-left: 18%;
+    margin-right: 18%;
+  }
+  .catalogo--mangas {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .hr--superpuesto {
+    display: none;
+  }
+}
+/*media screen*/
+/*media screen*/
+@media screen and (max-width: 768px) {
+  .contenedor--grid {
     display: grid;
-    grid-template-areas: /* de esta forma se establece que el body utilizará solo */
-        "header--grid"         /* una columna, compartida por el header, main y footer */
-        "main--grid"
-        "footer--grid";
+    grid-template-areas: "header--grid" "main--grid" "footer--grid";
     grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-    grid-template-rows: 75px auto 80px ; /* se establecerá la medida de cada una de las filas */
-}
-/*body*/
-
-/*header*/
-.header--grid{
+    grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
+  }
+  /*header*/
+  .header--grid {
     display: flex;
     background-color: rgb(51, 51, 51);
     background-size: cover;
     grid-area: header--grid;
     align-items: center;
-    width: auto;
-    height: auto;
-    position: sticky;
-    top: 0px;
-}
-
-.header--logo{
-    margin: 5%;
-}
-
-.header--logo img{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .header--logo {
+    margin: auto;
+  }
+  .header--logo img {
     max-width: 300px;
-}
-
-.header--encabezado{
-    font-size:22px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.encabezado--enlaces{
+  }
+  .header--encabezado {
+    font-size: 22px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .encabezado--enlaces {
     display: flex;
     list-style: none;
     justify-content: space-around;
     margin-left: 50px;
     margin-right: auto;
     flex-wrap: wrap;
-    animation-duration: 1s;
-    animation-name: transparencia;
-    animation-timing-function: infinite;
-}
-
-.encabezado--enlaces a{
+  }
+  .encabezado--enlaces a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    transition: 0.2s;
-}
-
-.dropdown-menu{
-    background-color: rgb(132, 132, 230);
-}
-
-.dropdown-menu a{
-    text-decoration: none;
-    color: rgb(51, 51, 51);
-    transition: 0.2s;
-}
-
-.dropdown-item a :hover{
-    color: rgb(132, 132, 230);
-}
-
-.encabezado--link{
+  }
+  .encabezado--link {
     color: rgb(132, 132, 230);
     padding: 10px;
     margin-right: 50px;
     flex-direction: row;
-}
-
-.encabezado--enlaces a:hover{
+  }
+  .encabezado--enlaces a:hover {
     color: rgb(132, 132, 230);
-}
-/*header*/
-
-/*main*/
-.main--grid{
-    grid-area: main--grid;
-}
-
-.catalogo{
-    margin-top: 1%;
-    display: grid;
-    justify-items: center;
-}
-
-.catalogo--mangas{
-    display: flex;
-    flex-wrap: wrap;
-    width: 1160px;
-    animation-duration: 1s;
-    animation-name: transparencia;
-    animation-timing-function: infinite;
-
-}
-
-.manga{   
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.manga a{
-    text-decoration: none;
-}
-
-.manga--imagen img{
-    width: 252px;
-    height: 400px;
-    transition: 0.2s;
-}
-
-.manga--imagen :hover{
-    transform: scale(1.03,1.03);
-}
-
-.manga--titulo h5{
-    color: rgb(51, 51, 51);
-    max-width: 252px;
-    max-height: 25px;
-    height: 25px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 100;
-    padding-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.034);
-    text-align: center;
-}
-
-.manga--titulo h2{
-    color: rgb(51, 51, 51);
-    max-width: 252px;
-    max-height: 25px;
-    height: 25px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 100;
-    padding-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.034);
-    text-align: center;
-}
-
-.encabezado--genero {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: rgb(132, 132, 230);
-    text-align: center;
-}
-
-.encabezado--genero a{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-.encabezado--genero a:hover{
-    color: rgb(0, 0, 0);
-}
-
-.encabezado--index--todos a h2:hover{
-    color: rgb(132, 132, 230);
-}
-
-.encabezado--index {
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 50px;
-    padding-bottom: 25px;
-}
-
-.encabezado--index h2{
-    display:inline-block;
-    flex-direction:row;
-    background-color: rgb(132, 132, 230);
-    border-radius: 5px;
-    border-bottom: 03px solid rgb(58, 58, 197);
-    padding: 05px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.encabezado--todos {
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 50px;
-    padding-bottom: 25px;
-}
-
-.encabezado--todos h2{
-    display:inline-block;
-    flex-direction:row;
-    background-color: rgb(132, 132, 230);
-    border-radius: 5px;
-    border-bottom: 03px solid rgb(58, 58, 197);
-    padding: 05px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.encabezado--index--todos {
-    width: 300px;
-    height: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.encabezado--index--todos a{
-    text-decoration: none;
-}
-
-.encabezado--index--todos a button{
-    background-color: rgb(44, 44, 44);
-    color: #ffffff;
-    text-align: center;
-    font-size: 15px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-radius: 5px;
-    border-bottom: 03px solid rgb(90, 90, 95);
-    padding: 05px;
-}
-
-#banner_hxh {
-    width: 100%;
-    height: 100%;
-    padding-bottom: 40px;
-    animation-duration: 1s;
-    animation-name: transparencia;
-    animation-timing-function: infinite;
-}
-
-.envio--gratis {
-    color: #ffffff;
-    background-color: rgb(132, 132, 230);
-    text-align: center;
-}
-
-.banner-one-piece-1 {
-    background-color: rgba(51, 51, 51, 0.048);    
-    margin-top: 5%;
-    margin-bottom: 5%;   
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row; 
-}
-
-.banner-one-piece-1 h2 {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: x-large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(128, 128, 128);
-}
-
-.banner-one-piece-1 img {
+  }
+  /*header*/
+  /*main*/
+  .catalogo--mangas {
+    width: 70%;
+  }
+  .banner-one-piece-1 img {
     height: 100%;
     border-radius: 50px;
-    width: 450px ;
-}
-
-/*main*/
-
-/*footer*/
-.footer--grid{
-    grid-area: footer--grid;
-    background-color: rgb(44, 44, 44);
-    color: rgb(255, 253, 253);
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.img--logo--footer {
-    position: relative;
-    top: 25px;
-    width: 250px;
-    height: 50px;
-}
-
-.footer--grid ul li p{
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.footer--grid ul li {
-    display: flex;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.footer--grid ul li img {
-    width: 20px;
-}
-
-.footer--grid ul {
-    margin-left: 50px;
-    margin-right: 20%;
-    display: inline-block;
-    flex-direction:row;
-    flex-wrap: wrap;
-}
-/*footer*/
-
-/*media screen*/
-@media screen and (max-width:1140px) and (min-width: 768px){
-    .catalogo{
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 1%;
-        margin-left: 18%;
-        margin-right: 18%;
-    }
-    
-    .catalogo--mangas{
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-    .hr--superpuesto{
-        display: none;
-    }
-}
-/*media screen*/
-
-/*media screen*/
-@media screen and (max-width:768px){
-    .contenedor--grid{
-        display: grid;
-        grid-template-areas: /* de esta forma se establece que el body utilizará solo */
-       /* una columna, compartida por el header, main y footer */
-            "header--grid"
-            "main--grid"
-            "footer--grid";
-        grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-        grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
-    }
-
-    /*header*/
-    .header--grid{
-        display: flex;
-        background-color: rgb(51, 51, 51);
-        background-size: cover;
-        grid-area: header--grid;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    .header--logo{
-        margin: auto
-    }
-
-    .header--logo img{
-        max-width: 300px;
-    }
-
-    .header--encabezado{
-        font-size:22px;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .encabezado--enlaces{
-        display: flex;
-        list-style: none;
-        justify-content: space-around;
-        margin-left: 50px;
-        margin-right: auto;
-        flex-wrap: wrap;
-    }
-
-    .encabezado--enlaces a{
-        text-decoration: none;
-        color: rgb(240, 248, 255);
-    }
-
-    .encabezado--link{
-        color: rgb(132, 132, 230);
-        padding: 10px;
-        margin-right: 50px;
-        flex-direction: row;
-    }
-
-    .encabezado--enlaces a:hover{
-        color: rgb(132, 132, 230);
-    }
-    /*header*/
-    
-    /*main*/ 
-    .catalogo--mangas{
-        width: 70%;
-    }
-
-    .banner-one-piece-1 img {
-        height: 100%;
-        border-radius: 50px;
-        width: 100% ;
-    }
-    /*main*/
-
-    /*footer*/
-    .footer--grid{
-        justify-content: center;
-    }
-
-    .footer--grid ul p{
-        text-align: center;
-    }
-
-    .img--logo--footer{
-        position: relative;
-        top: 0%;
-    }
-    /*footer*/
-}
-
-/*contacto*/
-.contenedor--grid--contacto{
-    display: grid;
-    grid-template-areas: /* de esta forma se establece que el body utilizará solo */
-    /* una columna, compartida por el header, main y footer */
-        "header--grid"
-        "main--contacto"
-        "footer--grid";
-        grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-        grid-template-rows: 75px auto 75px ; /* se establecerá la medida de cada una de las filas */
-}
-
-.main--contacto {
-    grid-area: main--contacto;
-    height: 797px;
-}
-
-.hr--superpuesto {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contacto--padre{
-    display: flex;
+    width: 100%;
+  }
+  /*main*/
+  /*footer*/
+  .footer--grid {
     justify-content: center;
-    margin-top: 5%;
-}
-
-.contacto{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 1000px;
-    animation-duration: 1s;
-    animation-name: transparencia;
-    animation-timing-function: infinite;
-}
-
-.div--contacto {
-    font-size: 17px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 150px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    top: 16px;
+  }
+  .footer--grid ul p {
     text-align: center;
-    background-color: rgb(221, 221, 221);
-}
-
-.formulario {
-    display: flex;
-    flex-direction: column;
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.enviar{
-    display: flex;
-    justify-content:end;
-}
-
-.formulario--enviar {
-    background-color: rgb(132, 132, 230);
-    width: 110px;
-    height: 40px;
-    box-shadow: -1.5px -1.5px rgb(80, 80, 206);
-    transition: 1s;
-}
-
-.formulario--enviar:hover {
-    color: #ffffff;
-}
-
-.formulario div {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:20px;
-    font-weight:bold;
-}
-
-.formulario div input{
-    margin-top:  10px;
-    margin-bottom:  10px;
-}
-
-.formulario div textarea {
-    height: 90px;
-    width: 400px;
-}
-
-#parrafo--formulario {
-    width: 400px;
-    color: rgb(132, 132, 230);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 16px;
-    text-align: justify;
-    margin-right: 1%;
-}
-/*contacto*/
-
-/*media screen*/
-@media screen and (max-width:1140px) and (min-width: 768px){
-    .contenedor--grid--contacto{
-        display: grid;
-        grid-template-areas: /* de esta forma se establece que el body utilizará solo */
-       /* una columna, compartida por el header, main y footer */
-            "header--grid"
-            "main--contacto"
-            "footer--grid";
-        grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-        grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
-    }
-
-    .contenedor--grid{
-        display: grid;
-        grid-template-areas: /* de esta forma se establece que el body utilizará solo */
-       /* una columna, compartida por el header, main y footer */
-            "header--grid"
-            "main--grid"
-            "footer--grid";
-        grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-        grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
-    }
-
-    .catalogo{
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 1%;
-        margin-left: 18%;
-        margin-right: 18%;
-    }
-    
-    .catalogo--mangas{
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-    .hr--superpuesto{
-        display: none;
-    }
-
-    .footer--grid{
-        justify-content: center;
-    }
+  }
+  .img--logo--footer {
+    position: relative;
+    top: 0%;
+  }
+  /*footer*/
 }
 /*media screen*/
-
+/*media screen*/
+@media screen and (max-width: 1140px) and (min-width: 768px) {
+  .contenedor--grid--contacto {
+    display: grid;
+    grid-template-areas: "header--grid" "main--contacto" "footer--grid";
+    grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+    grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
+  }
+  .contenedor--grid {
+    display: grid;
+    grid-template-areas: "header--grid" "main--grid" "footer--grid";
+    grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+    grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
+  }
+  .catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    margin-left: 18%;
+    margin-right: 18%;
+  }
+  .catalogo--mangas {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .hr--superpuesto {
+    display: none;
+  }
+  .footer--grid {
+    justify-content: center;
+  }
+}
+/*media screen*/
 /*media screen contacto*/
-@media screen and (max-width:768px){
-    .contenedor--grid--contacto{
-        display: grid;
-        grid-template-areas: /* de esta forma se establece que el body utilizará solo */
-       /* una columna, compartida por el header, main y footer */
-            "header--grid"
-            "main--contacto"
-            "footer--grid";
-        grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-        grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
-    }
-
-    .main--contacto{
-        background-color: rgb(51, 51, 51);
-        height: auto;
-    }
-
-    .contacto{
-        justify-content: center;
-    }
-
-    .div--contacto{
-        display: none;
-    }
-
-    .hr--superpuesto{
-        display: none;
-    }    
-
-    .formulario{
-        color: rgb(132, 132, 230);
-    }
-}
-/*media screen*/
-
-/*animaciones*/
-@keyframes transparencia{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-/*bootstrap*/
-.fondo-nav{
+@media screen and (max-width: 768px) {
+  .contenedor--grid--contacto {
+    display: grid;
+    grid-template-areas: "header--grid" "main--contacto" "footer--grid";
+    grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+    grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
+  }
+  .main--contacto {
     background-color: rgb(51, 51, 51);
+    height: auto;
+  }
+  .contacto {
+    justify-content: center;
+  }
+  .div--contacto {
+    display: none;
+  }
+  .hr--superpuesto {
+    display: none;
+  }
+  .formulario {
+    color: rgb(132, 132, 230);
+  }
 }
-
-.h6-no-margin{
-    margin: 0;
-}
-
-.font--nav{
-    font-size:medium;
-}
-/*bootstrap*/
+/*media screen*//*# sourceMappingURL=styles.css.map */

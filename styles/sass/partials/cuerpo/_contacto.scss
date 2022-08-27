@@ -1,0 +1,95 @@
+.contenedor--grid--contacto{
+    display: grid;
+    grid-template-areas: /* de esta forma se establece que el body utilizará solo */
+    /* una columna, compartida por el header, main y footer */
+        "header--grid"
+        "main--contacto"
+        "footer--grid";
+        grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+        grid-template-rows: 75px auto 75px ; /* se establecerá la medida de cada una de las filas */
+}
+
+.main--contacto {
+    grid-area: main--contacto;
+    height: 797px;
+}
+
+.hr--superpuesto {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contacto--padre{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1000px;
+    animation-duration: 1s;
+    animation-name: transparencia;
+    animation-timing-function: infinite;
+}
+
+.div--contacto {
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 150px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 16px;
+    text-align: center;
+    background-color: rgb(221, 221, 221);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    div{
+        font-family:$fuente--principal;
+        font-size:20px;
+        font-weight:bold;
+        input{
+            margin-top:  10px;
+            margin-bottom:  10px;
+        }
+        textarea {
+            height: 90px;
+            width: 400px;
+        }
+    }
+}
+
+.enviar{
+    display: flex;
+    justify-content:end;
+    :hover {
+        color: $blanco;
+    }
+}
+
+.formulario--enviar {
+    background-color: $violeta--principal;
+    width: 110px;
+    height: 40px;
+    box-shadow: -1.5px -1.5px rgb(80, 80, 206);
+    transition: 1s;
+}
+
+#parrafo--formulario {
+    width: 400px;
+    color: $violeta--principal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    margin-right: 1%;
+}

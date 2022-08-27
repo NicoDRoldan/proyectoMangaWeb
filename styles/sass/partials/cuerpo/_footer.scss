@@ -1,0 +1,35 @@
+.footer--grid{
+    grid-area: footer--grid;
+    background-color: rgb(44, 44, 44);
+    color: rgb(255, 253, 253);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img--logo--footer {
+    position: relative;
+    top: 25px;
+    width: 250px;
+    height: 50px;
+}
+
+.footer--grid{
+    ul{
+        margin-left: 50px;
+        margin-right: 20%;
+        display: inline-block;
+        flex-direction:row;
+        flex-wrap: wrap;
+        li{
+            display: flex;
+            font-family: $fuente--principal;
+            p{
+                font-size: 20px;
+                font-family: $fuente--principal;
+            }
+            img{
+                width: 20px;
+            };
+        }
+    }
+}
