@@ -18,8 +18,8 @@
 }
 
 .header--encabezado{
-    font-size:22px;
-    font-family:$fuente--principal;
+    font-size: 20px;
+    font-family: $fuente--principal;
 }
 
 .encabezado--enlaces{
@@ -64,7 +64,6 @@
 
 .navbar-nav{
     a{
-        font-family: $fuente--principal;
-        font-size: 20px;
+        @extend.header--encabezado;
     }
 }

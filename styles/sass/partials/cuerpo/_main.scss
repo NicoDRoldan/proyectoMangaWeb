@@ -18,12 +18,9 @@
 }
 
 .manga{   
+    @include marginPaddingManga;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-right: 15px;
-    padding-left: 15px;
     a{
         text-decoration: $link--no--subrayado;
     }
@@ -82,26 +79,7 @@
 
 .encabezado--index {
     width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 50px;
-    padding-bottom: 25px;
-    h2{
-        display:inline-block;
-        flex-direction:row;
-        background-color: rgb(132, 132, 230);
-        border-radius: 5px;
-        border-bottom: 03px solid rgb(58, 58, 197);
-        padding: 05px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-}
-
-.encabezado--todos {
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
+    @include margin--left--right(auto, auto);
     padding-top: 50px;
     padding-bottom: 25px;
     h2{
@@ -116,6 +94,10 @@
     }
 }
 
+.encabezado--todos {
+    @extend.encabezado--index
+}
+
 #banner_hxh {
     width: 100%;
     height: 100%;
@@ -126,10 +108,10 @@
 }
 
 .envio--gratis {
-    color: $blanco;
-    background-color: $violeta--principal;
-    text-align: center;
-    font-size: large;
+    color: map-get($estilo, color);
+    background-color: map-get($estilo, back);
+    text-align: map-get($estilo, alienText);
+    font-size: map-get($estilo, fontSize);
 }
 
 .banner-one-piece-1 {
