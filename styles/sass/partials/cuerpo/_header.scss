@@ -67,3 +67,13 @@
         @extend.header--encabezado;
     }
 }
+
+.btn-outline-success{
+    color: $violeta--principal;
+    border-color: $violeta--principal;
+  }
+  
+.btn:hover{
+    background-color: $violeta--principal;
+    border-color: $violeta--principal;
+  }

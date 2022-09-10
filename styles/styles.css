@@ -98,6 +98,16 @@ body {
   flex-direction: row;
 }
 
+.btn-outline-success {
+  color: rgb(132, 132, 230);
+  border-color: rgb(132, 132, 230);
+}
+
+.btn:hover {
+  background-color: rgb(132, 132, 230);
+  border-color: rgb(132, 132, 230);
+}
+
 .main--grid {
   grid-area: main--grid;
 }
