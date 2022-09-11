@@ -27,7 +27,7 @@ body {
   display: grid;
   grid-template-areas: "header--grid" "main--grid" "footer--grid";
   grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-  grid-template-rows: 75px auto 80px; /* se establecerá la medida de cada una de las filas */
+  grid-template-rows: 75px auto 101px; /* se establecerá la medida de cada una de las filas */
 }
 
 .header--grid {
@@ -254,21 +254,7 @@ body {
   color: rgb(255, 253, 253);
   display: flex;
   flex-wrap: wrap;
-}
-
-.img--logo--footer {
-  position: relative;
-  top: 25px;
-  width: 250px;
-  height: 50px;
-}
-
-.footer--grid ul {
-  margin-left: 50px;
-  margin-right: 20%;
-  display: inline-block;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .footer--grid ul li {
   display: flex;
@@ -279,14 +265,46 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .footer--grid ul li img {
-  width: 20px;
+  width: 40px;
+}
+.footer--grid ul li h5 {
+  font-size: 20px;
+}
+
+.footer--logo {
+  width: 100%;
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.img--logo--footer {
+  width: 250px;
+  height: 50px;
+}
+
+.footer--redes {
+  width: 25%;
+  height: 55%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer--redes li {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.footer--redes :hover {
+  width: 45px;
+  height: 45px;
 }
 
 .contenedor--grid--contacto {
   display: grid;
   grid-template-areas: "header--grid" "main--contacto" "footer--grid";
   grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-  grid-template-rows: 75px auto 75px; /* se establecerá la medida de cada una de las filas */
+  grid-template-rows: 75px auto 102px; /* se establecerá la medida de cada una de las filas */
 }
 
 .main--contacto {
@@ -553,4 +571,13 @@ body {
     color: rgb(132, 132, 230);
   }
 }
-/*media screen*//*# sourceMappingURL=styles.css.map */
+/*media screen*/
+/*media screen - 993*/
+@media screen and (max-width: 993px) {
+  .catalogo {
+    width: 80%;
+  }
+  .catalogo--mangas {
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */

@@ -197,3 +197,13 @@
     }
 }
 /*media screen*/
+
+/*media screen - 993*/
+@media screen and (max-width:993px){
+    .catalogo{
+        width: 80%;
+    }
+    .catalogo--mangas{
+        width: 100%;
+    }
+}
