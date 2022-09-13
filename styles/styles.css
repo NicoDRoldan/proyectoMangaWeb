@@ -388,7 +388,7 @@ body {
   transition: 1s;
 }
 
-#parrafo--formulario {
+.parrafo--formulario {
   width: 400px;
   color: rgb(132, 132, 230);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -415,19 +415,24 @@ body {
   }
 }
 /*media screen*/
-@media screen and (max-width: 1140px) and (min-width: 768px) {
+@media screen and (min-width: 817px) and (max-width: 1180px) {
+  .contenedor--grid {
+    display: grid;
+    grid-template-areas: "header--grid" "main--grid" "footer--grid";
+    grid-template-columns: 100%;
+    grid-template-rows: 75px auto auto;
+  }
   .catalogo {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 1%;
-    margin-left: 18%;
-    margin-right: 18%;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .catalogo--mangas {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 20px;
-    margin-left: 20px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .hr--superpuesto {
     display: none;
@@ -435,149 +440,72 @@ body {
 }
 /*media screen*/
 /*media screen*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .contenedor--grid {
     display: grid;
     grid-template-areas: "header--grid" "main--grid" "footer--grid";
-    grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-    grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
-  }
-  /*header*/
-  .header--grid {
-    display: flex;
-    background-color: rgb(51, 51, 51);
-    background-size: cover;
-    grid-area: header--grid;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
   }
   .header--logo {
     margin: auto;
   }
-  .header--logo img {
-    max-width: 300px;
-  }
-  .header--encabezado, .navbar-nav a {
-    font-size: 22px;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .encabezado--enlaces {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    margin-left: 50px;
-    margin-right: auto;
-    flex-wrap: wrap;
-  }
-  .encabezado--enlaces a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-  }
-  .encabezado--link {
-    color: rgb(132, 132, 230);
-    padding: 10px;
-    margin-right: 50px;
-    flex-direction: row;
-  }
-  .encabezado--enlaces a:hover {
-    color: rgb(132, 132, 230);
-  }
-  /*header*/
-  /*main*/
-  .catalogo--mangas {
-    width: 70%;
-  }
-  .banner-one-piece-1 img {
-    height: 100%;
-    border-radius: 50px;
-    width: 100%;
-  }
-  /*main*/
-  /*footer*/
-  .footer--grid {
-    justify-content: center;
-  }
-  .footer--grid ul p {
-    text-align: center;
-  }
-  .img--logo--footer {
-    position: relative;
-    top: 0%;
-  }
-  /*footer*/
-}
-/*media screen*/
-/*media screen*/
-@media screen and (max-width: 1140px) and (min-width: 768px) {
-  .contenedor--grid--contacto {
-    display: grid;
-    grid-template-areas: "header--grid" "main--contacto" "footer--grid";
-    grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-    grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
-  }
-  .contenedor--grid {
-    display: grid;
-    grid-template-areas: "header--grid" "main--grid" "footer--grid";
-    grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-    grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
-  }
-  .catalogo {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1%;
-    margin-left: 18%;
-    margin-right: 18%;
-  }
-  .catalogo--mangas {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
   .hr--superpuesto {
     display: none;
   }
-  .footer--grid {
-    justify-content: center;
+  .main--contacto {
+    background-color: rgb(51, 51, 51);
+  }
+  .div--contacto {
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+  }
+  .contacto {
+    color: rgb(255, 255, 255);
+  }
+}
+/*media screen*/
+@media screen and (max-width: 715px) {
+  .contacto {
+    color: rgb(255, 255, 255);
+  }
+  .contacto .parrafo--formulario {
+    margin: auto;
+  }
+  .contacto .parrafo--formulario h1, .contacto .parrafo--formulario p {
+    text-align: center;
+  }
+  .contacto .formulario {
+    align-items: center;
+  }
+  .contacto .formulario textarea {
+    height: 70px;
+    width: 300px;
+  }
+}
+/*media screen*/
+@media screen and (max-width: 816px) {
+  .catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .catalogo--mangas {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /*media screen*/
 /*media screen contacto*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .contenedor--grid--contacto {
     display: grid;
     grid-template-areas: "header--grid" "main--contacto" "footer--grid";
-    grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-    grid-template-rows: auto auto auto; /* se establecerá la medida de cada una de las filas */
-  }
-  .main--contacto {
-    background-color: rgb(51, 51, 51);
-    height: auto;
-  }
-  .contacto {
-    justify-content: center;
-  }
-  .div--contacto {
-    display: none;
-  }
-  .hr--superpuesto {
-    display: none;
-  }
-  .formulario {
-    color: rgb(132, 132, 230);
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
   }
 }
-/*media screen*/
-/*media screen - 993*/
-@media screen and (max-width: 993px) {
-  .catalogo {
-    width: 80%;
-  }
-  .catalogo--mangas {
-    width: 100%;
-  }
-}/*# sourceMappingURL=styles.css.map */
+/*media screen contacto*//*# sourceMappingURL=styles.css.map */
