@@ -303,10 +303,10 @@ body {
 .footer--redes li {
   margin-top: auto;
   margin-bottom: auto;
+  transition: 0.2s;
 }
 .footer--redes :hover {
-  width: 45px;
-  height: 45px;
+  transform: scale(1.03, 1.03);
 }
 
 .contenedor--grid--contacto {
