@@ -677,7 +677,7 @@ body {
   .merchandising:hover .merchandising--titulo {
     transform: scale(1);
     opacity: 0.8;
-    background-image: url(../../../../imagenes/photoshop/Sin\ título-1.jpg);
+    background-image: url(../../../../imagenes/photoshop/banner--merchan.jpg);
     background-color: rgba(51, 51, 51, 0.534);
   }
 }/*# sourceMappingURL=styles.css.map */
