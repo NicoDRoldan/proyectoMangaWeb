@@ -5,8 +5,20 @@
     padding-left: 15px;
 }
 
+@mixin marginPaddingMerchandising{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 @mixin margin--left--right($left, $right){
     margin-left: $left;
     margin-right: $right;
 }
 
+@mixin text-c-position-a-transition-a{
+    text-align: center;
+    position: absolute;
+    transition: all .3s;
+}

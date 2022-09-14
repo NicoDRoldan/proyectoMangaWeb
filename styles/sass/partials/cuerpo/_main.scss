@@ -1,7 +1,3 @@
-.main--grid{
-    grid-area: main--grid;
-}
-
 .catalogo{
     margin-top: 1%;
     display: grid;
@@ -134,4 +130,14 @@
         border-radius: 50px;
         width: 450px ;
     }
+}
+
+.catalogo--merchandising{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    animation-duration: 1s;
+    animation-name: transparencia;
+    animation-timing-function: infinite;
+    margin-bottom: 100px;
 }

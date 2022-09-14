@@ -115,5 +115,180 @@
         grid-template-rows: auto auto auto;
     }
 
+    .merchandising{
+        @include marginPaddingMerchandising;
+        display: flex;
+        flex-direction: column;
+
+        .merchandising--imagen{
+            width: 100%;
+            width: $size--merchandising--width;
+            height: $size--merchandising--height;
+        }
+        
+        .merchandising--titulo{
+    
+            transform: scale(1);
+            background-color: $fondo--manga;
+            a{
+                text-decoration: $link--no--subrayado;
+            }
+            position: relative;
+            top: 10px;
+            h5{
+                color: $black--principal;
+                width: $size--merchandising--width;
+                height: $size--merchandising--height;
+                max-height: 25px;
+                height: 25px;
+                font-family: $fuente--principal;
+                font-weight: 100;
+                padding-bottom: 20px;
+                text-align: center;
+            }
+        }
+    }
 }
 /*media screen contacto*/
+
+@media screen and (max-width:540px){
+    .banner-one-piece-1{
+        justify-content: center;
+        img{
+            width: 100%;
+        }
+        h2{
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+
+    .encabezado--todos{
+        width: 190px;
+    }
+
+    .merchandising{
+        width: 300px;
+        height: 300px;
+        padding: 0;
+
+        .merchandising--imagen{
+            padding: 0;
+            padding-right: 20px;
+            img{
+                width: 300px;
+                height: 300px;
+            }
+        }
+        .merchandising--titulo{
+    
+            transform: scale(1);
+            background-color: $fondo--manga;
+            a{
+                text-decoration: $link--no--subrayado;
+            }
+            position: relative;
+            top: 0px;
+            width: 300px;
+            h5{
+                color: $black--principal;
+                width: 300px;
+                height: 300px;
+                max-height: 25px;
+                height: 25px;
+                font-family: $fuente--principal;
+                font-weight: 100;
+                padding-bottom: 20px;
+                text-align: center;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:893px){
+    .banner-one-piece-1{
+        justify-content: center;
+        img{
+            border-radius: 5%;
+        }
+    }
+}
+
+@media screen and (max-width:375px){
+    .merchandising{
+        width: 300px;
+        padding: 0;
+
+        .merchandising--imagen{
+            width: 300px;
+            height: 300px;
+            
+            img{
+                width: 300px;
+                height: 300px;
+            }
+        }
+        .merchandising--titulo{
+    
+            transform: scale(1);
+            background-color: $fondo--manga;
+            a{
+                text-decoration: $link--no--subrayado;
+            }
+            position: relative;
+            top: 0px;
+            width: 280px;
+            h5{
+                color: $black--principal;
+                width: 300px;
+                height: 300px;
+                max-height: 25px;
+                height: 25px;
+                font-family: $fuente--principal;
+                font-weight: 100;
+                padding-bottom: 20px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:2000px){
+    .merchandising{
+        @include marginPaddingMerchandising;
+        display: flex;
+        flex-direction: column;
+    
+        .merchandising--imagen{
+            width: 100%;
+            width: $size--merchandising--width;
+            height: $size--merchandising--height;
+        }
+        
+        .merchandising--titulo{
+            @include text-c-position-a-transition-a;
+            transform: scale(1);
+            opacity: 0;
+            border-radius: 5px;
+
+            a{
+                text-decoration: $link--no--subrayado;
+            }
+    
+            h5{
+                color: $blanco;
+                width: $size--merchandising--width;
+                height: $size--merchandising--height;
+                line-height: 36rem;
+            }
+        }
+    
+        &:hover .merchandising--titulo{
+            transform: scale(1);
+            opacity: 0.8;
+            background-image: $hover--texto;
+            background-color: $black--principal--opaco;
+        }
+    }
+}
