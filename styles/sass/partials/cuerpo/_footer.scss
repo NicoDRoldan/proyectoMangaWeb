@@ -1,53 +1,89 @@
 .footer--grid{
-    grid-area: footer--grid;
     background-color: rgb(44, 44, 44);
     color: rgb(255, 253, 253);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    ul{
-        li{
+
+    .footer--grid2{
+        background-color: rgb(44, 44, 44);
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 400px 200px 400px 200px;
+        grid-column-gap: 50px;
+        justify-content: center;
+        
+        ul{
+            @include no--subrayado;
+            margin:0;
+            padding:0;
+        }
+
+        a{
+            @include no--subrayado;
+        }
+
+        .footer--logo{
             display: flex;
-            font-family: $fuente--principal;
-            p{
-                font-size: 20px;
-                font-family: $fuente--principal;
-            }
-            img{
-                width: 40px;
-            };
-            h5{
-                font-size: 20px;
+            justify-content: start;
+
+            .img--logo--footer{
+                margin-top: 22px;
+                width: 310px;
+                height: 70px;
             }
         }
-    }
-}
 
-.footer--logo{
-    width: 100%;
-    position: relative;
-    bottom: 20px;
-    display: flex;
-    justify-content: center;
-}
+        .footer--redes{
+            width: 150px;
 
-.img--logo--footer {
-    width: 250px;
-    height: 50px;
-}
+            img{
+                width: 50px;
+                height: 50px;
+                }
 
-.footer--redes{
-    width: 25%;
-    height: 55%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    li{        
-        margin-top: auto;
-        margin-bottom: auto;
-        transition: 0.2s;
-    }
-    :hover{
-        transform: scale(1.03,1.03);
+            ul{
+                display: flex;
+                justify-content: space-between;
+                transition: 0.8s;
+                li{
+                    :hover{
+                        transform: scale(1.10, 1.10);
+                    }
+                }
+            }
+        }
+
+        .footer--pago{
+            ul{
+                display: flex;
+                justify-content: space-between;
+                transition: 0.8s;
+                li{
+                    :hover{
+                        transform: scale(1.10, 1.10);
+                    }
+                }
+            }
+        }
+
+        .footer--info{
+            ul{
+                display: flex;
+                flex-direction: column;
+
+                :hover{
+                    color: $violeta--principal;
+                }
+                
+                li{
+                    width: 80px;
+                    height: 35px;
+                }
+            }
+
+            p{
+                font-size: 20px;
+            }
+
+        }
     }
 }

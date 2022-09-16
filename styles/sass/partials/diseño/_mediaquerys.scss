@@ -289,3 +289,30 @@
         }
     }
 }
+
+@media screen and (max-width:1380px){
+    .footer--grid{
+        
+        .footer--grid2{
+            grid-template-columns: 300px 300px;
+            grid-column-gap: 90px;
+            grid-row-gap: 40px;
+        }
+
+        .footer--info{
+            h3{
+                width: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:730px) {
+    .footer--grid{
+        
+        .footer--grid2{
+            grid-template-columns: 100px;
+            justify-content: start;
+        }
+    }
+}
