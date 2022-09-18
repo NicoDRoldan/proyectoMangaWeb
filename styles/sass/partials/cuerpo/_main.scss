@@ -1,5 +1,4 @@
 .catalogo{
-    margin-top: 1%;
     display: grid;
     justify-items: center;
 }
@@ -59,15 +58,15 @@
 }
 
 .encabezado--genero {
+    color: map-get($estilo, color);
     font-family: $fuente--principal;
-    color: $blanco;
-    background-color: $violeta--principal;
-    text-align: center;
+    background-color: map-get($map: $estilo, $key: back);
+    text-align: map-get($map: $estilo, $key: alienText);
     
     a{
+        color: map-get($estilo, color);
         font-family: $fuente--principal;
-        text-decoration: $link--no--subrayado;
-        color: $blanco;
+        text-decoration: map-get($map: $estilo, $key: noDecoracion);
     }
     :hover{
         color: $black--principal;
@@ -78,7 +77,7 @@
     width: 150px;
     @include margin--left--right(auto, auto);
     padding-top: 50px;
-    padding-bottom: 25px;
+    padding-bottom: 50px;
     h2{
         display:inline-block;
         flex-direction:row;
@@ -86,8 +85,6 @@
         border-radius: 5px;
         border-bottom: 03px solid rgb(58, 58, 197);
         padding: 05px;
-        margin-top: 50px;
-        margin-bottom: 50px;
     }
 }
 
@@ -98,7 +95,6 @@
 #banner_hxh {
     width: 100%;
     height: 100%;
-    padding-bottom: 40px;
     animation-duration: 1s;
     animation-name: transparencia;
     animation-timing-function: infinite;
@@ -113,12 +109,12 @@
 
 .banner-one-piece-1 {
     background-color: rgba(51, 51, 51, 0.048);    
-    margin-top: 5%;
-    margin-bottom: 5%;   
+    margin-bottom: 50px;   
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row; 
+    
     h2{
         margin-left: auto;
         margin-right: auto;
