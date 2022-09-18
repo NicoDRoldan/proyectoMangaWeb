@@ -60,6 +60,11 @@
         color: $blanco;
     }
 
+    .div--login{
+        background-color: $black--principal;
+        color: $blanco;
+    }
+
     .contacto{
         color: $blanco;
     }
@@ -103,7 +108,7 @@
 }
 /*media screen*/
 
-/*media screen contacto*/
+/*media screen contacto--registro*/
 @media screen and (max-width:992px){
     .contenedor--grid--contacto{
         display: grid;
@@ -113,6 +118,17 @@
             "footer--grid";
         grid-template-columns: 100%;
         grid-template-rows: auto auto auto;
+    }
+
+    .contenedor--grid--register{
+        display: grid;
+        grid-template-areas: 
+            "header--grid"
+            "main--contacto"
+            "footer--grid";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        background-color: $black--principal;
     }
 
     .merchandising{
@@ -146,6 +162,10 @@
                 text-align: center;
             }
         }
+    }
+
+    .container-xl{
+        margin-bottom: 50px;
     }
 }
 /*media screen contacto*/
@@ -249,6 +269,17 @@
             }
         }
     }
+
+    .background--black{
+        justify-content: end;
+        li{
+            a{
+                button{
+                    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width:992px) and (max-width:2000px){
@@ -314,5 +345,22 @@
             grid-template-columns: 100px;
             justify-content: start;
         }
+    }
+}
+
+@media screen and (max-width:770px) {
+    .contenedor--grid--contacto{
+        background-color: $black--principal;
+        display: grid;
+        grid-template-areas: 
+            "header--grid"
+            "main--contacto"
+            "footer--grid";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }   
+
+    .container-xl{
+        width: 370px;
     }
 }

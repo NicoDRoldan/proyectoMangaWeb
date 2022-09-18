@@ -76,4 +76,20 @@
 .btn:hover{
     background-color: $violeta--principal;
     border-color: $violeta--principal;
-  }
+}
+
+.background--black{
+    background-color: $black--principal;
+}
+
+.nav-item{
+    button{
+        color: $violeta--principal;
+        border-radius: 0%;
+        border: none;
+    }
+}
+
+.margin{
+    margin-left: 20px;
+}

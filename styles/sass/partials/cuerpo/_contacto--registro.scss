@@ -6,7 +6,18 @@
         "main--contacto"
         "footer--grid";
         grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-        grid-template-rows: 75px auto 102px ; /* se establecerá la medida de cada una de las filas */
+        grid-template-rows: 75px 760px 102px ; /* se establecerá la medida de cada una de las filas */
+}
+
+.contenedor--grid--register{
+    display: grid;
+    grid-template-areas: /* de esta forma se establece que el body utilizará solo */
+    /* una columna, compartida por el header, main y footer */
+        "header--grid"
+        "main--contacto"
+        "footer--grid";
+        grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+        grid-template-rows: 75px 760px 102px ; /* se establecerá la medida de cada una de las filas */
 }
 
 .main--contacto {
@@ -18,6 +29,8 @@
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    top: 45px;
 }
 
 .contacto--padre{
@@ -39,13 +52,23 @@
 .div--contacto {
     font-size: 17px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 150px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    top: 16px;
     text-align: center;
-    background-color: rgb(221, 221, 221);
+    width: 200px;
+    background-color: $blanco;
+}
+
+.div--login {
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 300px;
+    background-color: $blanco;
 }
 
 .formulario {
@@ -54,14 +77,12 @@
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+    
     div{
         font-family:$fuente--principal;
         font-size:20px;
         font-weight:bold;
-        input{
-            margin-top:  10px;
-            margin-bottom:  10px;
-        }
+
         textarea {
             height: 90px;
             width: 400px;
@@ -92,4 +113,25 @@
     font-size: 16px;
     text-align: justify;
     margin-right: 1%;
+}
+
+.background--blanco{
+    background-color: $blanco;
+}
+
+.container-xl{
+    margin-top: 50px;
+    width: 500px;
+}
+
+.mb-3{
+    label{
+        font-size: 18px
+    }
+}
+
+.g-3{
+    label{
+        font-size: 18px
+    }
 }

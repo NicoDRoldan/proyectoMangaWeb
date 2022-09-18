@@ -108,6 +108,20 @@ body {
   border-color: rgb(132, 132, 230);
 }
 
+.background--black {
+  background-color: rgb(51, 51, 51);
+}
+
+.nav-item button {
+  color: rgb(132, 132, 230);
+  border-radius: 0%;
+  border: none;
+}
+
+.margin {
+  margin-left: 20px;
+}
+
 .catalogo {
   margin-top: 1%;
   display: grid;
@@ -172,14 +186,14 @@ body {
 
 .encabezado--genero {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: rgb(255, 255, 255);
+  color: rgb(221, 221, 221);
   background-color: rgb(132, 132, 230);
   text-align: center;
 }
 .encabezado--genero a {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(221, 221, 221);
 }
 .encabezado--genero :hover {
   color: rgb(51, 51, 51);
@@ -284,14 +298,14 @@ body {
 .footer--grid .footer--grid2 ul {
   list-style: none;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(221, 221, 221);
   margin: 0;
   padding: 0;
 }
 .footer--grid .footer--grid2 a {
   list-style: none;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(221, 221, 221);
 }
 .footer--grid .footer--grid2 .footer--logo {
   display: flex;
@@ -344,7 +358,14 @@ body {
   display: grid;
   grid-template-areas: "header--grid" "main--contacto" "footer--grid";
   grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-  grid-template-rows: 75px auto 102px; /* se establecerá la medida de cada una de las filas */
+  grid-template-rows: 75px 760px 102px; /* se establecerá la medida de cada una de las filas */
+}
+
+.contenedor--grid--register {
+  display: grid;
+  grid-template-areas: "header--grid" "main--contacto" "footer--grid";
+  grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+  grid-template-rows: 75px 760px 102px; /* se establecerá la medida de cada una de las filas */
 }
 
 .main--contacto {
@@ -356,6 +377,8 @@ body {
   width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  top: 45px;
 }
 
 .contacto--padre {
@@ -380,12 +403,22 @@ body {
 .div--contacto {
   font-size: 17px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  width: 150px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  top: 16px;
   text-align: center;
+  width: 200px;
+  background-color: rgb(221, 221, 221);
+}
+
+.div--login {
+  font-size: 17px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 300px;
   background-color: rgb(221, 221, 221);
 }
 
@@ -403,10 +436,6 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
-.formulario div input {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
 .formulario div textarea {
   height: 90px;
   width: 400px;
@@ -417,7 +446,7 @@ body {
   justify-content: end;
 }
 .enviar :hover {
-  color: rgb(255, 255, 255);
+  color: rgb(221, 221, 221);
 }
 
 .formulario--enviar {
@@ -435,6 +464,23 @@ body {
   font-size: 16px;
   text-align: justify;
   margin-right: 1%;
+}
+
+.background--blanco {
+  background-color: rgb(221, 221, 221);
+}
+
+.container-xl {
+  margin-top: 50px;
+  width: 500px;
+}
+
+.mb-3 label {
+  font-size: 18px;
+}
+
+.g-3 label {
+  font-size: 18px;
 }
 
 @-webkit-keyframes transparencia {
@@ -498,16 +544,20 @@ body {
   }
   .div--contacto {
     background-color: rgb(51, 51, 51);
-    color: rgb(255, 255, 255);
+    color: rgb(221, 221, 221);
+  }
+  .div--login {
+    background-color: rgb(51, 51, 51);
+    color: rgb(221, 221, 221);
   }
   .contacto {
-    color: rgb(255, 255, 255);
+    color: rgb(221, 221, 221);
   }
 }
 /*media screen*/
 @media screen and (max-width: 715px) {
   .contacto {
-    color: rgb(255, 255, 255);
+    color: rgb(221, 221, 221);
   }
   .contacto .parrafo--formulario {
     margin: auto;
@@ -539,13 +589,20 @@ body {
   }
 }
 /*media screen*/
-/*media screen contacto*/
+/*media screen contacto--registro*/
 @media screen and (max-width: 992px) {
   .contenedor--grid--contacto {
     display: grid;
     grid-template-areas: "header--grid" "main--contacto" "footer--grid";
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
+  }
+  .contenedor--grid--register {
+    display: grid;
+    grid-template-areas: "header--grid" "main--contacto" "footer--grid";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    background-color: rgb(51, 51, 51);
   }
   .merchandising {
     margin-top: 10px;
@@ -579,6 +636,9 @@ body {
     font-weight: 100;
     padding-bottom: 20px;
     text-align: center;
+  }
+  .container-xl {
+    margin-bottom: 50px;
   }
 }
 /*media screen contacto*/
@@ -673,6 +733,12 @@ body {
     padding-bottom: 20px;
     text-align: center;
   }
+  .background--black {
+    justify-content: end;
+  }
+  .background--black li a button {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
 }
 @media screen and (min-width: 992px) and (max-width: 2000px) {
   .merchandising {
@@ -700,7 +766,7 @@ body {
     text-decoration: none;
   }
   .merchandising .merchandising--titulo h5 {
-    color: rgb(255, 255, 255);
+    color: rgb(221, 221, 221);
     width: 350px;
     height: 340px;
     line-height: 36rem;
@@ -726,5 +792,17 @@ body {
   .footer--grid .footer--grid2 {
     grid-template-columns: 100px;
     justify-content: start;
+  }
+}
+@media screen and (max-width: 770px) {
+  .contenedor--grid--contacto {
+    background-color: rgb(51, 51, 51);
+    display: grid;
+    grid-template-areas: "header--grid" "main--contacto" "footer--grid";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+  }
+  .container-xl {
+    width: 370px;
   }
 }/*# sourceMappingURL=styles.css.map */

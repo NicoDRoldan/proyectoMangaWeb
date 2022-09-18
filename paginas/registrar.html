@@ -13,12 +13,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="icon" href="../imagenes/logos/icono-web.jpg">
-    <title>Tu Manga AR - Shonen</title>
+    <title>Tu Manga AR - Registro</title>
     <meta name="description" content="Sitio Web dedicado a los fans del manga
     donde podrás comprar y ver información relacionada de la mejor manera.">
     <meta name="keywords" content="HTML, JS, MANGA, ONLINE, COMPRAS, SHONEN, SEINEN, ISEKAI, JOSEI, SHOJO">
 </head>
-<body class="contenedor--grid"> <!-- body será el contenedor principal que llevará el "display grid" -->
+<body class="contenedor--grid--register"> <!-- body será el contenedor principal que llevará el "display grid" -->
     <nav class="navbar navbar-expand-lg navbar-dark fondo-nav">
         <div class="container-fluid header--logo">
           <a class="navbar-brand" href="../index.html"><img src="../imagenes/tuMangaAr_logo.png" alt="logo"></a>
@@ -67,64 +67,110 @@
         </div>
       </nav>
     <!-- main -->
-    <main class="main--grid">
+    <main class="main--registro">
         <h4 class="encabezado--genero">
-            <a href="../index.html">Tu Manga AR </a>> Shonen
+            <a href="../index.html">Tu Manga AR </a>> Registro
         </h4>
-        <section class="catalogo">
-            <ul class="catalogo--mangas">
-                <li class="manga">
-                    <a href="../imagenes/chainsawman.jpg">
-                        <div class="manga--imagen">
-                            <img src="../imagenes/chainsawman.jpg" alt="chainsawman" class="img-thumbnail">
-                        </div>
-                        <div class="manga--titulo">
-                            <h5>Chainsaw Man #10</h5>
-                        </div>
-                    </a>
-                </li>
-                <li class="manga">
-                    <a href="../imagenes/dbs_14.jpg">
-                        <div class="manga--imagen">
-                            <img src="../imagenes/dbs_14.jpg" alt="dragonballsuper14" class="img-thumbnail">
-                        </div>
-                        <div class="manga--titulo">
-                            <h5>Dragon Ball Super #14</h5>
-                        </div>
-                    </a>
-                </li>
-                <li class="manga">
-                    <a href="../imagenes/onepiece_30.jpg">
-                        <div class="manga--imagen">
-                            <img src="../imagenes/onepiece_30.jpg" alt="one piece" class="img-thumbnail">
-                        </div>
-                        <div class="manga--titulo">
-                            <h5>One Piece #30</h5>
-                        </div>
-                    </a>
-                </li>
-                <li class="manga">
-                    <a href="../imagenes/fairi_tail_1.jpg">
-                        <div class="manga--imagen">
-                            <img src="../imagenes/fairi_tail_1.jpg" alt="fairi_tail_1" class="img-thumbnail">
-                        </div>
-                        <div class="manga--titulo">
-                            <h5>Fairy Tail #01</h5>
-                        </div>
-                    </a>
-                </li>
-                <li class="manga">
-                    <a href="../imagenes/myheroacademia_27.jpg">
-                        <div class="manga--imagen">
-                            <img src="../imagenes/myheroacademia_27.jpg" alt="myheroacademia_27" class="img-thumbnail">
-                        </div>
-                        <div class="manga--titulo">
-                            <h5>My Hero Academia #27</h5>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </section>
+        <div class="hr--superpuesto">
+            <hr>
+        </div>
+        <div class="div--login">
+            <h1 class="contacto--formulario">Registro</h1>
+        </div>
+        <!--Contenedor Formulario-->
+        <div class="container-xl">
+            <div class="background--blanco p-3">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Género</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">Femenino</option>
+                            <option value="2">Masculino</option>
+                            <option value="3">Prefiero no decirlo</option>
+                            <option disabled="true" selected="true" value="">Género</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Demografia Favorita</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">Josei</option>
+                            <option value="2">Isekai</option>
+                            <option value="3">Seinen</option>
+                            <option value="2">Shonen</option>
+                            <option value="3">Shojo</option>
+                            <option disabled="true" selected="true" value="">Demografia Favorita</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputEmail4" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="example@gmail.com">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPassword4" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress" class="form-label">Dirección</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Ciudad</label>
+                      <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputState" class="form-label">Provincia</label>
+                      <select id="inputState" class="form-select">
+                        <option value="1">BUENOS AIRES</option>
+                        <option value="2">CATAMARCA</option>
+                        <option value="5">CHACO</option>
+                        <option value="6">CHUBUT</option>
+                        <option value="50">CIUDAD AUTONOMA DE Bs As</option>
+                        <option value="3">CORDOBA</option>
+                        <option value="4">CORRIENTES</option>
+                        <option value="7">ENTRE RIOS</option>
+                        <option value="8">FORMOSA</option>
+                        <option value="9">JUJUY</option>
+                        <option value="10">LA PAMPA</option>
+                        <option value="11">LA RIOJA</option>
+                        <option value="12">MENDOZA</option>
+                        <option value="13">MISIONES</option>
+                        <option value="14">NEUQUEN</option>
+                        <option value="15">RIO NEGRO</option>
+                        <option value="16">SALTA</option>
+                        <option value="17">SAN LUIS</option>
+                        <option value="19">SANTA CRUZ</option>
+                        <option value="20">SANTA FE</option>
+                        <option value="21">SANTIAGO DEL ESTERO</option>
+                        <option value="22">TIERRA DEL FUEGO</option>
+                        <option disabled="true" selected="true" value="">Elegir Provincia</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2">
+                      <label for="inputZip" class="form-label">C. Postal</label>
+                      <input type="text" class="form-control" id="inputZip">
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                          Acepto Términos y Condiciones
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                    <button type="submit" class="btn btn-outline-success">Registrarse</button>  
+                    </div>
+                  </form>
+            </div>
+        </div>
         <!--Boton Whatsapp-->
         <a href="https://api.whatsapp.com/send?phone=XXXXXXXXXXX" class="btn-wsp" target="_blank">
             <img src="../imagenes/logos/whatsapp-redes.png" alt="whatsapp-redes">
