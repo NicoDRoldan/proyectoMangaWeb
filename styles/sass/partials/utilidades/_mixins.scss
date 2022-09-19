@@ -28,3 +28,9 @@
     text-decoration: none;
     color: $blanco;
 }
+
+@mixin animacion1seg{
+    animation-duration: 1s;
+    animation-name: transparencia;
+    animation-timing-function: infinite;
+}

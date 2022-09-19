@@ -65,27 +65,19 @@
         color: $blanco;
     }
 
-    .contacto{
-        color: $blanco;
+    .col{
+        label{
+            color: $blanco;
+        }
     }
 }
 /*media screen*/
 
 @media screen and (max-width:715px){
-    .contacto{
-        color: $blanco;
-        .parrafo--formulario{            
-            margin: auto;
-            h1, p{
-                text-align: center;
-            }
-        }
-        .formulario{
-            align-items: center;
-            textarea{
-                height: 70px;
-                width: 300px;
-            }
+    .parrafo--formulario{            
+        margin: auto;
+        h1, p{
+            text-align: center;
         }
     }
 }
@@ -166,6 +158,10 @@
 
     .container-xl{
         margin-bottom: 50px;
+    }
+
+    .parrafo--formulario{
+        width: 700px;
     }
 }
 /*media screen contacto*/
@@ -360,7 +356,17 @@
         grid-template-rows: auto auto auto;
     }   
 
+    .container{
+        .row{
+            flex-direction: column;
+        }
+    }
+
     .container-xl{
         width: 370px;
+    }
+
+    .parrafo--formulario{
+        width: 350px;
     }
 }

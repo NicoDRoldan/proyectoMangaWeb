@@ -7,9 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 1160px;
-    animation-duration: 1s;
-    animation-name: transparencia;
-    animation-timing-function: infinite;
+    @include animacion1seg;
 }
 
 .manga{   
@@ -74,8 +72,8 @@
 }
 
 .encabezado--index {
-    width: 150px;
     @include margin--left--right(auto, auto);
+    width: 150px;
     padding-top: 50px;
     padding-bottom: 50px;
     h2{
@@ -158,4 +156,8 @@
 
 .container-sm{
     width: 100%;
+}
+
+.sm-col{
+    margin-bottom: 50px;
 }

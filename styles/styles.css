@@ -30,6 +30,20 @@ body {
   grid-template-rows: 75px auto 135px; /* se establecerá la medida de cada una de las filas */
 }
 
+.contenedor--grid--contacto {
+  display: grid;
+  grid-template-areas: "header--grid" "main--contacto" "footer--grid";
+  grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+  grid-template-rows: 75px 760px 102px; /* se establecerá la medida de cada una de las filas */
+}
+
+.contenedor--grid--register {
+  display: grid;
+  grid-template-areas: "header--grid" "main--contacto" "footer--grid";
+  grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+  grid-template-rows: 75px 760px 102px; /* se establecerá la medida de cada una de las filas */
+}
+
 .header--grid {
   display: flex;
   background-color: rgb(51, 51, 51);
@@ -199,9 +213,9 @@ body {
 }
 
 .encabezado--index, .encabezado--todos {
-  width: 150px;
   margin-left: auto;
   margin-right: auto;
+  width: 150px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -286,6 +300,10 @@ body {
   width: 100%;
 }
 
+.sm-col {
+  margin-bottom: 50px;
+}
+
 .footer--grid {
   background-color: rgb(44, 44, 44);
   color: rgb(255, 253, 253);
@@ -358,20 +376,6 @@ body {
   font-size: 20px;
 }
 
-.contenedor--grid--contacto {
-  display: grid;
-  grid-template-areas: "header--grid" "main--contacto" "footer--grid";
-  grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-  grid-template-rows: 75px 760px 102px; /* se establecerá la medida de cada una de las filas */
-}
-
-.contenedor--grid--register {
-  display: grid;
-  grid-template-areas: "header--grid" "main--contacto" "footer--grid";
-  grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
-  grid-template-rows: 75px 760px 102px; /* se establecerá la medida de cada una de las filas */
-}
-
 .main--contacto {
   grid-area: main--contacto;
   height: 797px;
@@ -383,25 +387,6 @@ body {
   margin-right: auto;
   position: relative;
   top: 45px;
-}
-
-.contacto--padre {
-  display: flex;
-  justify-content: center;
-  margin-top: 5%;
-}
-
-.contacto {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 1000px;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-name: transparencia;
-          animation-name: transparencia;
-  -webkit-animation-timing-function: infinite;
-          animation-timing-function: infinite;
 }
 
 .div--contacto {
@@ -424,41 +409,6 @@ body {
   text-align: center;
   width: 300px;
   background-color: rgb(221, 221, 221);
-}
-
-.formulario {
-  display: flex;
-  flex-direction: column;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin-left: auto;
-  margin-right: auto;
-}
-.formulario div {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-}
-.formulario div textarea {
-  height: 90px;
-  width: 400px;
-}
-
-.enviar {
-  display: flex;
-  justify-content: end;
-}
-.enviar :hover {
-  color: rgb(221, 221, 221);
-}
-
-.formulario--enviar {
-  background-color: rgb(132, 132, 230);
-  width: 110px;
-  height: 40px;
-  box-shadow: -1.5px -1.5px rgb(80, 80, 206);
-  transition: 1s;
 }
 
 .parrafo--formulario {
@@ -485,6 +435,13 @@ body {
 
 .g-3 label {
   font-size: 18px;
+}
+
+.accordion-body {
+  font-size: 20px;
+}
+.accordion-body img {
+  width: 60px;
 }
 
 @-webkit-keyframes transparencia {
@@ -554,27 +511,17 @@ body {
     background-color: rgb(51, 51, 51);
     color: rgb(221, 221, 221);
   }
-  .contacto {
+  .col label {
     color: rgb(221, 221, 221);
   }
 }
 /*media screen*/
 @media screen and (max-width: 715px) {
-  .contacto {
-    color: rgb(221, 221, 221);
-  }
-  .contacto .parrafo--formulario {
+  .parrafo--formulario {
     margin: auto;
   }
-  .contacto .parrafo--formulario h1, .contacto .parrafo--formulario p {
+  .parrafo--formulario h1, .parrafo--formulario p {
     text-align: center;
-  }
-  .contacto .formulario {
-    align-items: center;
-  }
-  .contacto .formulario textarea {
-    height: 70px;
-    width: 300px;
   }
 }
 /*media screen*/
@@ -643,6 +590,9 @@ body {
   }
   .container-xl {
     margin-bottom: 50px;
+  }
+  .parrafo--formulario {
+    width: 700px;
   }
 }
 /*media screen contacto*/
@@ -806,7 +756,13 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
   }
+  .container .row {
+    flex-direction: column;
+  }
   .container-xl {
     width: 370px;
+  }
+  .parrafo--formulario {
+    width: 350px;
   }
 }/*# sourceMappingURL=styles.css.map */

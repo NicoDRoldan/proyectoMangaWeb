@@ -19,3 +19,25 @@ body{
     grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
     grid-template-rows: 75px auto 135px ; /* se establecerá la medida de cada una de las filas */
 }
+
+.contenedor--grid--contacto{
+    display: grid;
+    grid-template-areas: /* de esta forma se establece que el body utilizará solo */
+    /* una columna, compartida por el header, main y footer */
+        "header--grid"
+        "main--contacto"
+        "footer--grid";
+        grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+        grid-template-rows: 75px 760px 102px ; /* se establecerá la medida de cada una de las filas */
+}
+
+.contenedor--grid--register{
+    display: grid;
+    grid-template-areas: /* de esta forma se establece que el body utilizará solo */
+    /* una columna, compartida por el header, main y footer */
+        "header--grid"
+        "main--contacto"
+        "footer--grid";
+        grid-template-columns: 100%; /* la columna utilizará el 100% de la pantalla */
+        grid-template-rows: 75px 760px 102px ; /* se establecerá la medida de cada una de las filas */
+}
