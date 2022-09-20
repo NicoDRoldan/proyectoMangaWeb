@@ -21,53 +21,53 @@
 <!--Body-->
 <body class="contenedor--grid"> <!-- body será el contenedor principal que llevará el "display grid" -->
     <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark fondo-nav">
-            <div class="container-fluid header--logo">
-              <a class="navbar-brand" href="index.html"><img src="imagenes/tuMangaAr_logo.png" alt="logo"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active font--nav" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link font--nav" href="paginas/contacto.html">Contacto</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link font--nav" href="paginas/merchandising.html">Merchandising</a>
-                  </li>
-                  <li class="nav-item dropdown font--nav">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Categorias
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a href="paginas/shonen.html">Shonen</a></li>
-                        <li class="dropdown-item"><a href="paginas/isekai.html">Isekai</a></li>
-                        <li class="dropdown-item"><a href="paginas/josei.html">Josei</a></li>
-                        <li class="dropdown-item"><a href="paginas/seinen.html">Seinen</a></li>
-                        <li class="dropdown-item"><a href="paginas/shojo.html">Shojo</a></li>
-                        <li class="dropdown-item"><a href="paginas/productos.html">Productos</a></li>
-                    </ul>
-                  </li>
+    <nav class="navbar navbar-expand-lg navbar-dark fondo-nav">
+        <div class="container-fluid header--logo">
+          <a class="navbar-brand" href="index.html"><img src="imagenes/tuMangaAr_logo.png" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active font--nav" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font--nav" href="paginas/contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font--nav" href="paginas/merchandising.html">Merchandising</a>
+              </li>
+              <li class="nav-item dropdown font--nav">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a href="paginas/shonen.html">Shonen</a></li>
+                    <li class="dropdown-item"><a href="paginas/isekai.html">Isekai</a></li>
+                    <li class="dropdown-item"><a href="paginas/josei.html">Josei</a></li>
+                    <li class="dropdown-item"><a href="paginas/seinen.html">Seinen</a></li>
+                    <li class="dropdown-item"><a href="paginas/shojo.html">Shojo</a></li>
+                    <li class="dropdown-item"><a href="paginas/productos.html">Productos</a></li>
                 </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-                <!--Registro y Login-->
-                <ul class="background--black nav margin">
-                    <li class="nav-item">
-                        <a href="paginas/registrar.html"><button type="button" class="btn btn-outline-primary">Register</button></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="paginas/login.html"><button type="button" class="btn btn-outline-primary">Login</button></a>
-                    </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            <!--Registro y Login-->
+            <ul class="background--black nav margin">
+                <li class="nav-item">
+                    <a href="paginas/registrar.html"><button type="button" class="btn btn-outline-primary">Register</button></a>
+                </li>
+                <li class="nav-item">
+                    <a href="paginas/login.html"><button type="button" class="btn btn-outline-primary">Login</button></a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
     <!-- main -->
     <main class="main--grid">
         <!--Sección de envío gratis-->
@@ -94,6 +94,7 @@
                     <img src="imagenes/web/evangelionBanner.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" alt="banner_hxh">
                   </div>
                 </div>
+                <!--Botones del Carrusel-->
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
@@ -102,13 +103,16 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
+            </div>
         </div>
-        </div>
+        <!--Sección Destacados-->
         <section class="encabezado--index">
             <button type="button" class="btn btn-secondary position-absolute start-50 translate-middle">DESTACADOS</button>
         </section>
+        <!--Sección Catalogo-->
         <section class="catalogo">
             <ul class="catalogo--mangas">
+                <!--Tarjetas Mangas-->
                 <li class="manga">
                     <a href="imagenes/bluelock.jpg" target="_blank">
                         <div class="manga--imagen">
@@ -191,11 +195,14 @@
                 </li>
             </ul>
         </section>
+        <!--Sección Novedades-->
         <section class="encabezado--index">
             <button type="button" class="btn btn-secondary position-absolute start-50 translate-middle">NOVEDADES</button>
         </section>
+        <!--Sección Catalogo-->
         <section class="catalogo">
             <ul class="catalogo--mangas">
+                <!--Tarjetas Mangas-->
                 <li class="manga">
                     <a href="imagenes/deathnote01.jpg" target="_blank">
                         <div class="manga--imagen">
@@ -258,12 +265,15 @@
                 </li>
             </ul>
         </section>
+        <!--Botón ver todos los mangas-->
         <section class="encabezado--todos">
             <a href="paginas/productos.html"><button type="button" class="btn btn-secondary">VER TODOS LOS MANGAS</button></a>
         </section>
+        <!--Banner One Piece-->
         <section class="banner-one-piece-1">
             <img src="imagenes/background/one-piece-index.jpg" alt="one-piece-index" class="rounded-start"><h2>Tus mangas favoritos, ¡En un solo lugar!</h2>
         </section>
+        <!--Sección Preguntas frecuentes-->
         <div class="container-sm sm-col">
             <div class="col">
                 <div class="div--preguntas">
