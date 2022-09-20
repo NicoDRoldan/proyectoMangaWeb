@@ -159,5 +159,20 @@
 }
 
 .sm-col{
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.margin-50-top{
+    margin-top: 50px;
+}
+
+.div--preguntas {
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.048);    
 }

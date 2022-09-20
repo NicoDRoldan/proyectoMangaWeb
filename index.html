@@ -18,7 +18,9 @@
     donde podrás comprar y ver información relacionada de la mejor manera.">
     <meta name="keywords" content="HTML, JS, MANGA, ONLINE, COMPRAS, SHONEN, SEINEN, ISEKAI, JOSEI, SHOJO">
 </head>
+<!--Body-->
 <body class="contenedor--grid"> <!-- body será el contenedor principal que llevará el "display grid" -->
+    <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark fondo-nav">
             <div class="container-fluid header--logo">
               <a class="navbar-brand" href="index.html"><img src="imagenes/tuMangaAr_logo.png" alt="logo"></a>
@@ -54,7 +56,7 @@
                   <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
-                <!-- Registro y Login -->
+                <!--Registro y Login-->
                 <ul class="background--black nav margin">
                     <li class="nav-item">
                         <a href="paginas/registrar.html"><button type="button" class="btn btn-outline-primary">Register</button></a>
@@ -68,19 +70,25 @@
           </nav>
     <!-- main -->
     <main class="main--grid">
+        <!--Sección de envío gratis-->
         <section>
             <h6 class="envio--gratis h6-no-margin" >¡ENVÍO GRATIS A TODO EL PAÍS!</h6>
         </section>
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <!--Carrusel de imagenes-->
+        <div class="container-sm margin-50-top">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="imagenes/banner_hxh.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" alt="banner_hxh">
+                    <img src="imagenes/web/chainsaw.webp" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" alt="chainsaw">
                   </div>
                   <div class="carousel-item">
-                    <img src="imagenes/web/slamdunk.webp" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" alt="slamdunk">
+                    <img src="imagenes/web/slamdunk.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" alt="slamdunk">
                   </div>
                   <div class="carousel-item">
-                    <img src="imagenes/web/tokiorevengers.webp" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" alt="tokiorevengers">
+                    <img src="imagenes/web/tokiorevengers.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" alt="tokiorevengers">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imagenes/web/banner-hxh.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" alt="banner_hxh">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -91,7 +99,8 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
-            </div>
+        </div>
+        </div>
         <section class="encabezado--index">
             <button type="button" class="btn btn-secondary position-absolute start-50 translate-middle">DESTACADOS</button>
         </section>
@@ -254,7 +263,7 @@
         </section>
         <div class="container-sm sm-col">
             <div class="col">
-                <div class="div--login">
+                <div class="div--preguntas">
                     <h4 class="contacto--formulario">Preguntas Frecuentes</h4>
                 </div>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
